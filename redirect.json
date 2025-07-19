@@ -1,0 +1,24 @@
+{
+  "status": 200,
+  "headers": {
+    "content-type": "text/html; charset=ISO-8859-1",
+    "transfer-encoding": "chunked",
+    "connection": "keep-alive",
+    "server": "nginx",
+    "date": "Tue, 08 Jul 2025 01:39:40 GMT",
+    "cache-control": "max-age=0, no-cache, no-store, must-revalidate",
+    "content-security-policy": "default-src 'self' https://*.paypal.com https://*.paypalobjects.com; frame-src 'self' https://*.paypal.com https://*.paypalobjects.com; script-src 'self' https://*.paypal.com https://*.paypalobjects.com 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://*.paypal.com https://*.paypalobjects.com; style-src 'self' https://*.paypal.com https://*.paypalobjects.com 'unsafe-inline'; img-src 'self' https: data:;",
+    "payflow-debug-id": "a93f7c304325a",
+    "paypal-debug-id": "c9254ad08370a",
+    "set-cookie": "V5PFLSESSIONID=-cLnsE7wkO98w8BouT-ukFlvZRCsPbLJKM8KAU-2hO0PwTEDqPfw!1859485592!1925807263; path=/; HttpOnly;Secure;HttpOnly, PAYFLOWCOOKIE=02c7df8377-7c7d-4cq3uI1YhtkXDxbu5JT9ByviLNC78QGfTJy_95VNw1B934llsbaNeRrSiyD8MsUEnKcJU; path=/; SameSite=None; Secure; HttpOnly",
+    "strict-transport-security": "max-age=31536000; includeSubDomains",
+    "traceparent": "00-0000000000000000000c9254ad08370a-b9c31096c3e663b7-01",
+    "vary": "Accept-Encoding, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-oracle-dms-ecid": "01f00f80-4f63-45f4-b30b-06d9947d6f89-000c8dbf",
+    "x-oracle-dms-rid": "0",
+    "x-xss-protection": "1; mode=block",
+    "dc": "phx-origin-www-1.paypal.com"
+  },
+  "data": "\n\n\n\n\n\n\n\n\n<html:xhtml/>\n\n<head>\n    <title>Payflow Link</title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\"/>\n    <!-- Payflow-Build-ID : ****6796-ccg13pf4app8 -->\n    <link media=\"screen\" rel=\"stylesheet\" type=\"text/css\" href=\"/stylesheet/cmnCore.css\"/>\n    <link media=\"print\" rel=\"stylesheet\" type=\"text/css\" href=\"/stylesheet/cmnPrint.css\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/stylesheet/pflPayments.css\">\n</head>\n\n<body>\n\n\n\n\n\n\n\n\t\n\t\n\t\n\n\n\n<div class=\"pageMargins\">\n\n\t\n\t\n\n\n\n\n\n\n\n\n\n\n<div class=\"layout1\">\n    <div id=\"contentPagePayment\">\n        <div class=\"noRoundedCornerLayout\">\n            <div class=\"pageMargins\">\n                <div id=\"contentPaymentOptions\">\n                    <div class=\"noRoundedCornerLayout\">\n                        <div id=\"contPaymentOptionsContent\">\n\n                            \n                                <br />   <br />\n                                \n\n\n\n\n\n\n<div class=\"messageBox error\">\n\t\t<div>\n            <p>\n                \n                    \n                    Some required information is missing or incorrect. Please correct the fields below and try again.\n                                \n            </p>\n            <ul>\n                \n                    <li>\t&nbsp;&nbsp;Error: Token is missing. Please return to the website from where you started your purchase and try again.</li>\n                \n            </ul>\n        </div>\n</div>\t\n                            \n                            \n\n                        </div>\n                    </div>\n                </div>\n            </div>\n    </div>\n</div>\n    </div>\n</div>\n</div>\n<br />\n<br />\n<br />\n<br />\n<br /></html>\n\n\n</body>\n</html>"
+}

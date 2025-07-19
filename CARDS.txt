@@ -1,0 +1,1 @@
+# Agrega las tarjetas aquí en formato CC|MM|AA|CVV (una por línea)
