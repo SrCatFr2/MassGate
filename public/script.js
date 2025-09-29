@@ -766,8 +766,10 @@ function displayRooms() {
 function updateAllUsersDisplay() {
     if (!usersList) return;
 
-    const onlineUsers = allUsers.filter(user => user.isOnline);
-    const offlineUsers = allUsers.filter(user => !user.isOnline);
+    // Filtrar usuarios válidos (con username)
+    const validUsers = allUsers.filter(user => user && user.username);
+    const onlineUsers = validUsers.filter(user => user.isOnline);
+    const offlineUsers = validUsers.filter(user => !user.isOnline);
 
     if (onlineCount) {
         onlineCount.textContent = onlineUsers.length;
@@ -777,20 +779,25 @@ function updateAllUsersDisplay() {
         ${onlineUsers.length > 0 ? `
             <div class="users-section">
                 <div class="users-section-title">En línea (${onlineUsers.length})</div>
-                ${onlineUsers.map(user => createUserElement(user, true)).join('')}
+                ${onlineUsers.map(user => createUserElement(user, true)).filter(html => html).join('')}
             </div>
         ` : ''}
 
         ${offlineUsers.length > 0 ? `
             <div class="users-section">
                 <div class="users-section-title">Desconectados (${offlineUsers.length})</div>
-                ${offlineUsers.map(user => createUserElement(user, false)).join('')}
+                ${offlineUsers.map(user => createUserElement(user, false)).filter(html => html).join('')}
             </div>
         ` : ''}
     `;
 }
 
 function createUserElement(user, isOnline) {
+    // Verificar que el usuario tenga datos básicos
+    if (!user || !user.username) {
+        return '';
+    }
+
     const avatarHtml = user.profilePicture && user.profilePictureType !== 'default' 
         ? `<img src="${user.profilePicture}" alt="${user.username}">`
         : `<div class="user-avatar-fallback">${user.username.charAt(0).toUpperCase()}</div>`;
