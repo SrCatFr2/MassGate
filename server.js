@@ -1,12 +1,11 @@
 const express = require('express');
 const axios = require('axios');
+const path = require('path');
+const fs = require('fs');
 const app = express();
-const PORT = 3000;
 
 app.use(express.json());
-app.use(express.static('public'));
 
-// Función para chequear una tarjeta
 async function checkCard(cc, mes, ano, cvv) {
   const randoka = Math.floor(Math.random() * 999999) + 1;
   const randotellk = Math.floor(Math.random() * (9999 - 1111 + 1)) + 1111;
@@ -66,7 +65,7 @@ async function checkCard(cc, mes, ano, cvv) {
   }
 }
 
-// Endpoint para chequear una sola tarjeta
+// API endpoint
 app.post('/check-single-card', async (req, res) => {
   const { card } = req.body;
   const [cc, mes, ano, cvv] = card.split('|');
@@ -88,6 +87,14 @@ app.post('/check-single-card', async (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// Serve HTML
+app.get('/', (req, res) => {
+  const htmlPath = path.join(__dirname, 'public', 'index.html');
+  if (fs.existsSync(htmlPath)) {
+    res.sendFile(htmlPath);
+  } else {
+    res.send('HTML file not found');
+  }
 });
+
+module.exports = app;
